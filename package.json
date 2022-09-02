@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
+    "@next/bundle-analyzer": "^12.2.5",
     "dotenv": "^16.0.1",
     "framer-motion": "^6.5.1",
     "globby": "^13.1.2",

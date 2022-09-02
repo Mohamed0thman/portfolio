@@ -9,9 +9,6 @@ export function NavLink({ path, label, isSticky, children, ...rest }) {
   const style = {
     marginRight: 10,
   };
-
-  console.log(router.asPath);
-  console.log(isSticky);
   return (
     <NextLink href={path}>
       <MenuLink

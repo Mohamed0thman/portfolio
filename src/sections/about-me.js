@@ -33,7 +33,6 @@ export default function AboutMe() {
           </Text>
           <div sx={styles.aboutMe.imageBox}>
             <Image
-              priority
               src={Hero}
               alt="hero"
               layout="fill"

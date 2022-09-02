@@ -13,7 +13,7 @@ import ai from "../assets/icons/ai.svg";
 import balsamiq from "../assets/icons/balsamiq.svg";
 import figma from "../assets/icons/figma.svg";
 import ine from "../assets/icons/in.svg";
-import miro from "../assets/icons/ae.svg";
+import miro from "../assets/icons/miro.svg";
 import ps from "../assets/icons/ps.svg";
 import xd from "../assets/icons/xd.svg";
 
