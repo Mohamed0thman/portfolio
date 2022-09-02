@@ -17,10 +17,9 @@ export default function DesignProcess() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
-        
-          <SEO title="Fahmi" />
-          <div>dasd</div>
-     
+        <SEO title="Fahmi" />
+        <div>dasd</div>
+        <div>dasd</div>
       </StickyProvider>
     </ThemeProvider>
   );
