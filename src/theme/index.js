@@ -269,7 +269,7 @@ export default {
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
-      Roboto: "'Roboto', sans-serif",
+      fontFamily: "'Roboto', sans-serif",
       fontWeight: "400",
       fontSize: ["18px", "20px", "24px"],
       color: "text",

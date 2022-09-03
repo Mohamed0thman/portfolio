@@ -73,7 +73,6 @@ const styles = {
     },
     address: {
       fontFamily: "'Roboto', sans-serif",
-      marginTop: "-15px",
       fontSize: "24px",
       color: "#9D9D9D",
     },

@@ -221,12 +221,18 @@ const fadeIn2 = keyframes`
 `;
 const styles = {
   carouselWrapper: {
+    mb: "-40px",
+    mt: "-40px",
+    mx: -3,
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "column",
     alignItems: "flex-end",
     mt: "-30px",
     px: "15px",
+    flexWrap: "wrap",
+    animation: `all ${fadeIn} 0.8s ease-in`,
+
     ".carousel-container": {
       width: "100%",
       maxWidth: [
