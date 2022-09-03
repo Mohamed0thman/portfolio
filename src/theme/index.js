@@ -225,30 +225,7 @@ export default {
       },
     },
   },
-  cards: {
-    primary: {
-      padding: 2,
-      borderRadius: 4,
-    },
-    offer: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      flex: ["1 1 calc(50% - 16px)", "1 1 20%"],
-      minHeight: 130,
-      m: 2,
-      background: "#FFFFFF",
-      border: "1px solid #EDEFF6",
-      borderRadius: 5,
-    },
-    featureCard: {
-      display: "flex",
-      alignItems: "flex-start",
-      flexDirection: "row",
-      p: 3,
-    },
-  },
+
   forms: {
     label: {
       fontSize: 1,

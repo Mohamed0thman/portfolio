@@ -61,6 +61,29 @@ export default function Project() {
     projects: all,
   });
 
+  const sliderParams = {
+    additionashow: 2,
+    arrows: false,
+    autoPlaySpeed: 3000,
+    centerMode: false,
+    className: "",
+    containerClass: "carousel-container",
+    dotListClass: "",
+    draggable: true,
+    focusOnSelect: false,
+    infinite: true,
+    customDot: <CustomDot />,
+    itemClass: "",
+    keyBoardControl: true,
+    minimumTouchDrag: 80,
+    renderButtonGroupOutside: true,
+    renderDotsOutside: false,
+    responsive: responsive,
+    showDots: true,
+    sliderClass: "",
+    slidesToSlide: 1,
+  };
+
   return (
     <section
       id="projects"
@@ -84,6 +107,7 @@ export default function Project() {
           <Text
             style={{
               color: "#fff",
+              fontSize: "21px",
             }}
           >
             Top projects that present the quality and the way of my work.
@@ -136,43 +160,30 @@ export default function Project() {
           </Flex>
         </Box>
 
-        <Box sx={styles.carouselWrapper}>
-          <Carousel
-            additionashow={2}
-            arrows={false}
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="carousel-container"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite={true}
-            customDot={<CustomDot />}
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside
-            renderDotsOutside={false}
-            responsive={responsive}
-            showDots={true}
-            sliderClass=""
-            slidesToSlide={1}
-          >
+        <Box sx={styles.carouselWrapper} className="project__wrapper">
+          <Carousel {...sliderParams}>
             {state.projects.map((item) => (
-              <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
-                <Image
-                  priority="true"
-                  width={480}
-                  height={330}
-                  src={item.image}
-                  alt={item.title}
-                />
+              <Box
+                sx={styles.reviewCard}
+                className="project__card"
+                key={`${state.active}-card--key${item.id}`}
+              >
+                <Box>
+                  <Image
+                    width={500}
+                    height={330}
+                    priority="true"
+                    src={item.image}
+                    alt={item.title}
+                  />
+                </Box>
                 <Flex
+                  className="project__text"
                   style={{
                     width: "100%",
-                    justifyContent: "space-around",
+                    justifyContent: "space-between",
                     alignItems: "center",
+                    padding: "10px 10px 0 10px",
                   }}
                 >
                   <Text
@@ -231,7 +242,16 @@ const styles = {
     mt: "-30px",
     px: "15px",
     flexWrap: "wrap",
-    animation: `all ${fadeIn} 0.8s ease-in`,
+
+    ".project__card": {
+      "& > img": {
+        animation: `${fadeIn} .8s ease-in`,
+      },
+
+      ".project__text": {
+        animation: `${fadeIn2} 0.7s ease-in`,
+      },
+    },
 
     ".carousel-container": {
       width: "100%",
@@ -263,6 +283,7 @@ const styles = {
     boxShadow: "0px 0px 1px rgba(38, 78, 118, 0.35)",
     transition: "all 0.3s",
     borderRadius: "6px",
+    width: "500px",
 
     color: "#fff",
     textAlign: "left",
@@ -315,7 +336,7 @@ const styles = {
     padding: "7px",
     margin: "0 auto",
     borderRadius: "5px",
-    backgroundColor: "#F7F8FB",
+    backgroundColor: "#252F33",
     button: {
       border: 0,
       padding: ["15px 20px", "15px 27px"],
@@ -332,6 +353,7 @@ const styles = {
       "&.active": {
         color: "#0f2137",
         backgroundColor: "#ffffff",
+        fontWeight: "700",
         boxShadow: "0 3px 4px rgba(38, 78, 118, 0.1)",
       },
       "&:focus": {

@@ -6,7 +6,7 @@ export default function SkillsCard({ skill, index }) {
     <Flex
       style={{
         position: "relative",
-        flex: " 0 0 calc(33.33% - 20px)",
+        flex: " 0 0 calc(30% - 20px)",
         padding: "20px",
         margin: "10px",
         alignItems: "center",
@@ -15,7 +15,17 @@ export default function SkillsCard({ skill, index }) {
         borderRadius: "8px",
       }}
     >
-      <h2>0{index + 1}</h2>
+      <h2
+        style={{
+          marginBottom: "5px",
+          marginTop: "0px",
+          fontSize: "40px",
+          fontWidth: "700",
+          color: "#2A393F",
+        }}
+      >
+        0{index + 1}
+      </h2>
       <Image
         priority="true"
         width={38}
@@ -28,8 +38,26 @@ export default function SkillsCard({ skill, index }) {
         }}
       />
       <Box>
-        <p style={{ marginBottom: "5px", marginTop: "0px" }}>{skill.title}</p>
-        <p style={{ marginBottom: "5px", marginTop: "0px" }}>
+        <p
+          style={{
+            marginBottom: "5px",
+            marginTop: "0px",
+            fontSize: "16px",
+            fontWidth: "700",
+            color: "#2A393F",
+          }}
+        >
+          {skill.title}
+        </p>
+        <p
+          style={{
+            marginBottom: "5px",
+            marginTop: "0px",
+            fontSize: "9px",
+            fontWidth: "400",
+            color: "#7B7B7B",
+          }}
+        >
           {skill.subTitle}
         </p>
       </Box>

@@ -15,6 +15,7 @@ export default function BackgroundImage() {
         }}
       >
         <Image
+          priority="true"
           layout="fill"
           objectFit="cover"
           quality={100}

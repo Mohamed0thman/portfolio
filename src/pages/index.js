@@ -10,7 +10,8 @@ import AboutMe from "../sections/about-me";
 import WorkExperience from "../sections/work-experience";
 import MyServices from "../sections/services-section";
 import Project from "../sections/project-section";
-import TestimonialCard from "../sections/testimonial";
+import Testimonial from "../sections/testimonial";
+import MessageSection from "../sections/message-section";
 import ToolsAndSkills from "../sections/tools_and_skills";
 
 export default function Home() {
@@ -25,7 +26,8 @@ export default function Home() {
           <MyServices />
           <ToolsAndSkills />
           <Project />
-          <TestimonialCard />
+          <Testimonial />
+          <MessageSection />
         </Layout>
       </StickyProvider>
     </ThemeProvider>

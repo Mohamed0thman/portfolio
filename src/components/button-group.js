@@ -5,7 +5,13 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 export default function ButtonGroup({ next, previous }) {
   return (
-    <Flex sx={{ width: "100%" }}>
+    <Flex
+      sx={{
+        width: "100%",
+        marginTop: "-50px",
+        position: "relative",
+      }}
+    >
       <Container>
         <Box sx={styles.buttonGroup} className="button__group">
           <button onClick={previous} aria-label="Previous">
@@ -22,7 +28,7 @@ export default function ButtonGroup({ next, previous }) {
 const styles = {
   buttonGroup: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
     mb: -4,
     button: {
       bg: "transparent",
