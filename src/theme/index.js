@@ -269,18 +269,13 @@ export default {
   styles: {
     // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
-      fontFamily: "body",
-      lineHeight: "body",
-      fontWeight: "body",
+      Roboto: "'Roboto', sans-serif",
+      fontWeight: "400",
+      fontSize: ["18px", "20px", "24px"],
+      color: "text",
       fontSmoothing: "antialiased",
+
       // Modal Global Style
-      ".modal-video-close-btn": {
-        cursor: "pointer",
-      },
-      ".modal-video-movie-wrap": {
-        margin: 6,
-        width: "auto",
-      },
     },
 
     // Divider styles

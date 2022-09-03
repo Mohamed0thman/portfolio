@@ -47,10 +47,12 @@ export default function Banner() {
           <Box
             style={{
               marginTop: "55px",
+
+              display: "flex",
+              justifyContent: "center",
             }}
           >
             <Image
-              sx={styles.banner.icon}
               priority="true"
               width={50}
               height={50}
@@ -58,7 +60,7 @@ export default function Banner() {
               alt="Gmail"
             />
             <Image
-              sx={styles.banner.icon}
+              sx={{ marginRight: "30px", marginLeft: "30px" }}
               priority="true"
               width={50}
               height={50}
@@ -66,7 +68,6 @@ export default function Banner() {
               alt="Be"
             />
             <Image
-              sx={styles.banner.icon}
               priority="true"
               width={50}
               height={50}
@@ -75,24 +76,19 @@ export default function Banner() {
             />
           </Box>
         </Box>
-        <Box
-          style={{
-            position: "absolute",
-            top: "95%",
-            left: "50%",
-
-            transform: " translate(-50%, -50%)",
-          }}
-        >
-          <Box
-            style={{
-              position: "relative",
-            }}
-          >
-            <Image src={scrollIcon} alt="scroll" width={18} height={34} />
-          </Box>
-        </Box>
       </Container>
+      <Image
+        sx={{
+          position: "absolute",
+          top: "90%",
+          left: "50%",
+          transform: "translate(-50%, -50)",
+        }}
+        src={scrollIcon}
+        alt="scroll"
+        width={18}
+        height={34}
+      />
     </section>
   );
 }
@@ -118,11 +114,6 @@ const styles = {
     position: "relative",
     zIndex: 2,
     overflow: "hidden",
-
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-
     container: {
       pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
       pb: [2, null, 0, null, 2, 0, null, 5],
@@ -142,9 +133,6 @@ const styles = {
       textFillColor: "transparent",
       backgroundSize: "200% auto",
       animation: `${shine} 3s linear infinite`,
-    },
-    icon: {
-      marginRight: "30px",
     },
 
     paragraph: { color: "#fff" },

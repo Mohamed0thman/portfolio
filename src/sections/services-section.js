@@ -11,10 +11,17 @@ import serviceImage from "../assets/Services.png";
 
 export default function MyServices() {
   return (
-    <section sx={styles.banner} id="Home">
-      <Container css={{ textAlign: "center" }}>
+    <section sx={styles.services} id="Home">
+      <Container sx={styles.services.container}>
         <SectionHeader text="My" glowText="Services" />
-        <Container sx={styles.banner.container}>
+        <Box
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            marginTop: "75px",
+          }}
+        >
           <Box>
             <Heading
               as="p"
@@ -24,14 +31,14 @@ export default function MyServices() {
                 fontFamily: "Roboto",
                 fontStyle: "normal",
                 fontWeight: " 600",
-                fontSize: "39.0625px",
-                lineHeight: "59px",
+                fontSize: "39px",
                 textAlign: "left",
+                marginBottom: "35px",
               }}
             >
               How can I make your <br /> business grow?
             </Heading>
-            <List childStyle={styles.listItem} />
+            <List childStyle={styles.services.listItem} />
           </Box>
 
           <Box style={{ position: "relative" }}>
@@ -43,40 +50,25 @@ export default function MyServices() {
               alt="serviceImage"
             />
           </Box>
-        </Container>
+        </Box>
       </Container>
     </section>
   );
 }
 
 const styles = {
-  banner: {
-    pt: ["30px", "35px", "40px", "45px", null, null, "52px", "60px"],
-    pb: [2, null, 0, null, 2, 0, null, 5],
+  services: {
+    pt: ["65px", "70px"],
+    pb: ["65px", "70px"],
 
     position: "relative",
     zIndex: 2,
     backgroundColor: "#2A393F",
-    container: {
-      minHeight: "inherit",
-      display: "flex",
-      justifyContent: "space-between",
-    },
-
-    contentBox: {
-      flexBasis: "50%",
-      width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
-      mx: "auto",
-      textAlign: "center",
-      mb: ["40px", null, null, null, null, 7],
-      textAlign: "left",
-    },
     imageBox: {
       flexBasis: "50%",
       justifyContent: "center",
       textAlign: "center",
       display: "inline-flex",
-      mb: [0, null, -6, null, null, "-40px", null, -3],
       img: {
         position: "relative",
         height: [245, "auto"],

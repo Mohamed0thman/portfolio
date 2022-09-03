@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Heading, Text } from "theme-ui";
-// import Image from "next/image";
 import Image from "./image";
 
 export default function ExCard({
@@ -9,6 +8,7 @@ export default function ExCard({
   altText = "default alt text",
   name,
   job,
+  from,
   address,
   date,
 }) {
@@ -24,9 +24,18 @@ export default function ExCard({
       />
       <Box sx={styles.wrapper}>
         <Heading sx={styles.wrapper.title}>{name}</Heading>
-        <Text sx={styles.wrapper.subTitle}>{job}</Text>
-        <Text sx={styles.wrapper.subTitle}>{address}</Text>
-        <Text sx={styles.wrapper.subTitle}>{date}</Text>
+        <Text as="p" variant="text.paragraph" sx={styles.wrapper.job}>
+          {job}
+        </Text>
+        <Text as="p" variant="paragraph" sx={styles.wrapper.address}>
+          {address}
+        </Text>
+        <Text as="p" variant="paragraph" sx={styles.wrapper.from}>
+          {from}
+        </Text>
+        <Text as="p" variant="paragraph" sx={styles.wrapper.date}>
+          {date}
+        </Text>
       </Box>
     </Box>
   );
@@ -36,32 +45,43 @@ const styles = {
   card: {
     display: "flex",
     justifySelf: "center",
-    mb: -1,
+    alignItems: "self-start",
+    marginTop: "40px",
   },
 
   img: {
-    width: ["70px", null, null, "80px", "90px", "auto"],
-    height: "auto",
-    flexShrink: 0,
-    mr: [2, 3, null, null, 4, 5],
-    ml: -2,
+    mr: "55px",
   },
   wrapper: {
     display: "flex",
     flexDirection: "column",
-    mt: "-5px",
+
     title: {
-      fontSize: [2, 3],
-      color: "heading_secondary",
-      lineHeight: 1.4,
+      fontFamily: "'Roboto', sans-serif",
+
+      fontSize: "28px",
+      color: "white",
       fontWeight: 700,
-      mb: ["10px", null, "15px"],
     },
 
-    subTitle: {
-      fontSize: [1, "15px"],
+    job: {
+      fontFamily: "'Roboto', sans-serif",
+
+      fontSize: "24px",
+      color: "white",
       fontWeight: 400,
-      lineHeight: "1.9",
+    },
+    address: {
+      fontFamily: "'Roboto', sans-serif",
+      marginTop: "-15px",
+      fontSize: "24px",
+      color: "#9D9D9D",
+    },
+
+    date: {
+      fontFamily: "'Roboto', sans-serif",
+      fontSize: "28px",
+      color: "secondary",
     },
   },
 };

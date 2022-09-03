@@ -7,6 +7,7 @@ import Image from "../components/image";
 import { keyframes } from "@emotion/react";
 
 import SectionHeader from "../components/Section-header";
+import SkillsCard from "../components/skills_card";
 
 import ae from "../assets/icons/ae.svg";
 import ai from "../assets/icons/ai.svg";
@@ -24,9 +25,9 @@ export default function ToolsAndSkills() {
   return (
     <section style={{ overflow: "hidden" }} sx={styles.tools} id="Tools">
       <BackgroundImage />
-      <Container>
+      <Container sx={styles.tools.container}>
         <SectionHeader text="Tools &" glowText="Skills" />
-        <Container sx={styles.tools.container}>
+        <Box sx={styles.tools.content}>
           <Box sx={styles.tools.main}>
             <Image
               priority="true"
@@ -41,7 +42,7 @@ export default function ToolsAndSkills() {
               src={figma}
               alt=""
             />
-            <div
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-1s" }}
             >
@@ -55,8 +56,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-1s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-2s" }}
             >
@@ -70,8 +71,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-2s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-3s" }}
             >
@@ -85,8 +86,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-3s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-4s" }}
             >
@@ -100,8 +101,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-4s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-5s" }}
             >
@@ -115,8 +116,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-5s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{ position: "relative", animationDelay: "-6s" }}
             >
@@ -130,8 +131,8 @@ export default function ToolsAndSkills() {
                   animationDelay: "-6s",
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               sx={styles.tools.item}
               style={{
                 position: "relative",
@@ -149,53 +150,21 @@ export default function ToolsAndSkills() {
                   animationDelay: "-7s",
                 }}
               />
-            </div>
+            </Box>
           </Box>
           <Flex
             style={{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",
+              marginTop: "40px",
             }}
           >
             {skills.map((skill, i) => (
-              <Flex
-                key={i}
-                style={{
-                  position: "relative",
-                  flex: " 0 0 calc(33.33% - 20px)",
-                  padding: "20px",
-                  margin: "10px",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  backgroundColor: "white",
-                  borderRadius: "8px",
-                }}
-              >
-                <h2>0{i + 1}</h2>
-                <Image
-                  priority="true"
-                  width={38}
-                  height={38}
-                  src={skill.icon}
-                  alt={skill.title}
-                  style={{
-                    width: "auto",
-                    height: "auto",
-                  }}
-                />
-                <Box>
-                  <p style={{ marginBottom: "5px", marginTop: "0px" }}>
-                    {skill.title}
-                  </p>
-                  <p style={{ marginBottom: "5px", marginTop: "0px" }}>
-                    {skill.subTitle}
-                  </p>
-                </Box>
-              </Flex>
+              <SkillsCard key={i} index={i} skill={skill} />
             ))}
           </Flex>
-        </Container>
+        </Box>
       </Container>
     </section>
   );
@@ -225,16 +194,15 @@ const styles = {
   tools: {
     pt: ["30px", "35px", "40px", "70px", null, null, "52px", "60px"],
     pb: ["30px", "35px", "40px", "70px", null, null, "52px", "60px"],
-
     position: "relative",
     zIndex: 2,
-    backgroundColor: "#2A393F",
-    container: {
+    content: {
       minHeight: "inherit",
       display: "flex",
       justifyContent: "center",
       flexDirection: "column",
       alignItems: "center",
+      marginTop: "75px",
     },
 
     main: {
@@ -259,7 +227,7 @@ const styles = {
       height: "65px",
       animation: ` ${spinAround} 7s linear infinite`,
 
-      " & > span >img": {
+      " &  > img": {
         animation: `${spinAroundSelf} 7s linear infinite`,
       },
     },

@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { keyframes } from "@emotion/react";
 import { jsx, Container, Heading, Text, Box, Flex, Button } from "theme-ui";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from "../components/image";
 
 import SectionHeader from "../components/Section-header";
 import Carousel from "react-multi-carousel";
@@ -161,7 +162,7 @@ export default function Project() {
             {state.projects.map((item) => (
               <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
                 <Image
-                  priority
+                  priority="true"
                   width={480}
                   height={330}
                   src={item.image}
