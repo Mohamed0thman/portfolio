@@ -108,27 +108,28 @@ export default {
   },
 
   text: {
+    paragraph: {
+      Roboto: "'Roboto', sans-serif",
+      fontWeight: "400",
+      fontSize: ["18px", "20px", "24px"],
+      color: "text",
+    },
     heroPrimary: {
       fontFamily: "'Cairo', sans-serif",
       fontWeight: "Bold",
-      fontSize: ["30px", "45px", "65px", "80px", "120px"],
+      fontSize: ["40px", "60px", "70px", "80px", "120px"],
       lineHeight: [1.3, null, null, null, null, 1.2],
-      fontWeight: 700,
       mb: [4, null, null, null, null, 5],
     },
 
     heroSecondary: {
-      fontSize: ["24px", null, "28px", null, null, "32px", null, "36px"],
+      fontSize: ["24px", null, "28px", null, null, "32px", null, "40px"],
       fontFamily: "'Quantico', sans-serif",
+      fontWeight: "Bold",
       fontStyle: "normal",
-      fontWeight: 700,
-      fontSize: "40px",
-      lineHeight: "30px",
-      color: "#FFFFFF",
+      color: "white",
       lineHeight: [1.3, null, null, 1.25],
       textAlign: "center",
-      fontWeight: "700",
-      letterSpacing: "-.5px",
 
       "& > span": {
         marginLeft: "20px",
@@ -262,22 +263,6 @@ export default {
         boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
         outline: "none",
       },
-    },
-  },
-
-  badges: {
-    primary: {
-      color: "background",
-      bg: "#28A5FF",
-      borderRadius: 30,
-      p: "3px 11px",
-      fontSize: 1,
-      letterSpacing: "-0.5px",
-    },
-    outline: {
-      color: "primary",
-      bg: "transparent",
-      boxShadow: "inset 0 0 0 1px",
     },
   },
 

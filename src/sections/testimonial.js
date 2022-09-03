@@ -1,16 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {
-  jsx,
-  Container,
-  Heading,
-  Text,
-  Box,
-  Paragraph,
-  Input,
-  Button,
-} from "theme-ui";
-import Image from "next/image";
+import { jsx, Container, Text, Box, Paragraph, Input, Button } from "theme-ui";
+// import Image from "next/image";
+import Image from "../components/image";
 
 import { useState, useRef } from "react";
 
@@ -53,7 +45,13 @@ function CustomDot({ onMove, index, onClick, active }) {
       }}
       onClick={() => onClick()}
     >
-      <Image width={40} height={40} src={reviews[index].image} alt="" />
+      <Image
+        priority="true"
+        width={40}
+        height={40}
+        src={reviews[index].image}
+        alt=""
+      />
     </Box>
   );
 }

@@ -2,13 +2,16 @@
 /** @jsx jsx */
 import { jsx, Container, Box, Heading, Text } from "theme-ui";
 import { keyframes } from "@emotion/react";
-import Image from "next/image";
+// import Image from "next/image";
+
+import Image from "../components/image";
 
 // import Image from "../components/image";
 
 import Gmail from "../assets/icons/Gmail_icon.svg";
 import Linkedin from "../assets/icons/Linkedin_icon.svg";
 import Be from "../assets/icons/Be_icon.svg";
+import scrollIcon from "../assets/icons/scroll.svg";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -33,7 +36,6 @@ export default function Banner() {
               wrapper="span"
               cursor={true}
               speed={9}
-              style={{ fontSize: "40px" }}
             />
           </Heading>
           <Heading variant="heroPrimary" sx={styles.banner.heading} as="h1">
@@ -47,15 +49,47 @@ export default function Banner() {
               marginTop: "55px",
             }}
           >
-            <Image priority width={46} height={38} src={Gmail} alt="Gmail" />
-            <Image priority width={46} height={38} src={Be} alt="Be" />
             <Image
-              priority
-              width={46}
-              height={38}
+              sx={styles.banner.icon}
+              priority="true"
+              width={50}
+              height={50}
+              src={Gmail}
+              alt="Gmail"
+            />
+            <Image
+              sx={styles.banner.icon}
+              priority="true"
+              width={50}
+              height={50}
+              src={Be}
+              alt="Be"
+            />
+            <Image
+              sx={styles.banner.icon}
+              priority="true"
+              width={50}
+              height={50}
               src={Linkedin}
               alt="Linkedin"
             />
+          </Box>
+        </Box>
+        <Box
+          style={{
+            position: "absolute",
+            top: "95%",
+            left: "50%",
+
+            transform: " translate(-50%, -50%)",
+          }}
+        >
+          <Box
+            style={{
+              position: "relative",
+            }}
+          >
+            <Image src={scrollIcon} alt="scroll" width={18} height={34} />
           </Box>
         </Box>
       </Container>
@@ -83,6 +117,12 @@ const styles = {
     height: "100vh",
     position: "relative",
     zIndex: 2,
+    overflow: "hidden",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
     container: {
       pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
       pb: [2, null, 0, null, 2, 0, null, 5],
@@ -103,15 +143,10 @@ const styles = {
       backgroundSize: "200% auto",
       animation: `${shine} 3s linear infinite`,
     },
-    glow: {
-      fontFamily: "Quantico",
-      fontStyle: "normal",
-      fontWeight: "700",
-      fontSize: "40px",
-      lineHeight: "30px",
-      color: "#12FDC4",
-      textShadow: "0px 4px 20px rgba(0, 255, 209, 0.58)",
+    icon: {
+      marginRight: "30px",
     },
+
     paragraph: { color: "#fff" },
   },
 };

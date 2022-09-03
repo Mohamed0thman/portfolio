@@ -1,8 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Box, Heading, Text, Button } from "theme-ui";
-import Image from "next/image";
+import { Container, Box, Heading } from "theme-ui";
+// import Image from "next/image";
+import Image from "../components/image";
 
 import SectionHeader from "../components/Section-header";
 import List from "../components/list";
@@ -35,7 +36,7 @@ export default function MyServices() {
 
           <Box style={{ position: "relative" }}>
             <Image
-              priority
+              priority="true"
               width={450}
               height={350}
               src={serviceImage}

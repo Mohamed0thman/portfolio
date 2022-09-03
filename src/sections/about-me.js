@@ -15,10 +15,10 @@ export default function AboutMe() {
         <Box sx={styles.aboutMe.container}>
           <Text
             as="p"
+            variant="paragraph"
             style={{
-              flexBasis: "50%",
+              flexBasis: "60%",
               textAlign: "left",
-              color: "#fff",
             }}
           >
             I&apos;m a UI/UX Designer, Interaction Designer, and Product
@@ -32,12 +32,7 @@ export default function AboutMe() {
             and timelines.
           </Text>
           <div sx={styles.aboutMe.imageBox}>
-            <Image
-              src={Hero}
-              alt="hero"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src={Hero} alt="hero" layout="fill" objectFit="contain" />
           </div>
         </Box>
       </Container>
@@ -48,7 +43,7 @@ export default function AboutMe() {
 const styles = {
   aboutMe: {
     pt: ["30px", "35px", "40px", "45px", null, null, "52px", "60px"],
-    pb: [2, null, 0, null, 2, 0, null, 5],
+    pb: ["30px", "35px", "40px", "45px", null, null, "52px", "60px"],
     position: "relative",
     zIndex: 2,
     backgroundColor: "#2A393F",
@@ -57,10 +52,11 @@ const styles = {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
+      marginTop: "20px",
     },
 
     imageBox: {
-      flexBasis: "50%",
+      flexBasis: "35%",
       width: "100%",
       height: "450px",
       position: "relative",

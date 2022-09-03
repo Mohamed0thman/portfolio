@@ -13,7 +13,8 @@ import { experience as data } from "../data/data";
 
 export default function WorkExperience() {
   return (
-    <section style={{}} sx={{ variant: "section.experience" }} id="experience">
+    <section style={{    overflow: "hidden",
+  }} sx={{ variant: "section.experience" }} id="experience">
       <BackgroundImage />
       <Container>
         <SectionHeader text="Work" glowText="Experience" />

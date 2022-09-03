@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { Flex, jsx } from "theme-ui";
 import { Container, Box } from "theme-ui";
-import Image from "next/image";
+import Image from "../components/image";
 
 import { keyframes } from "@emotion/react";
 
@@ -22,14 +22,14 @@ import { skills } from "../data/data";
 
 export default function ToolsAndSkills() {
   return (
-    <section sx={styles.tools} id="Tools">
+    <section style={{ overflow: "hidden" }} sx={styles.tools} id="Tools">
       <BackgroundImage />
       <Container>
         <SectionHeader text="Tools &" glowText="Skills" />
         <Container sx={styles.tools.container}>
           <Box sx={styles.tools.main}>
             <Image
-              priority
+              priority="true"
               width={65}
               height={65}
               className="figma"
@@ -46,8 +46,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-1s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={ps}
                 alt=""
@@ -61,8 +61,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-2s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={ai}
                 alt=""
@@ -76,8 +76,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-3s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={xd}
                 alt=""
@@ -91,8 +91,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-4s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={miro}
                 alt=""
@@ -106,8 +106,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-5s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={ine}
                 alt=""
@@ -121,8 +121,8 @@ export default function ToolsAndSkills() {
               style={{ position: "relative", animationDelay: "-6s" }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={ae}
                 alt=""
@@ -140,8 +140,8 @@ export default function ToolsAndSkills() {
               }}
             >
               <Image
-                priority
-                objectFit="contain"
+                priority="true"
+                objectfit="contain"
                 layout="fill"
                 src={balsamiq}
                 alt=""
@@ -174,7 +174,7 @@ export default function ToolsAndSkills() {
               >
                 <h2>0{i + 1}</h2>
                 <Image
-                  priority
+                  priority="true"
                   width={38}
                   height={38}
                   src={skill.icon}

@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import Sticky from "react-stickynode";
 import Header from "./header/header";
 import Footer from "./footer/footer";
-import BackgroundImage from "./background_image";
 import TrackingLight from "./tracking_light";
 
 export default function Layout({ children }) {

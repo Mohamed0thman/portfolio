@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Heading, Text } from "theme-ui";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from "./image";
 
 export default function ExCard({
   src,
@@ -13,7 +14,14 @@ export default function ExCard({
 }) {
   return (
     <Box sx={styles.card}>
-      <Image width={87} height={87} src={src} alt={altText} sx={styles.img} />
+      <Image
+        priority="true"
+        width={87}
+        height={87}
+        src={src}
+        alt={altText}
+        sx={styles.img}
+      />
       <Box sx={styles.wrapper}>
         <Heading sx={styles.wrapper.title}>{name}</Heading>
         <Text sx={styles.wrapper.subTitle}>{job}</Text>
