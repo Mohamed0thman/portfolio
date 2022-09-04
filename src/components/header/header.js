@@ -10,7 +10,7 @@ import Logo from "../logo";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
 
-import LogoFahmi from "../../assets/logo.svg";
+import LogoFahmi from "../../assets/icons/logo.svg";
 
 export default function Header({ isSticky }) {
   return (

@@ -89,9 +89,22 @@ export default function MessageSection() {
             flexDirection: " column",
           }}
         >
-          <Paragraph>
+          <Paragraph
+            style={{
+              fontSize: "25px",
+              marginBottom: "15px",
+            }}
+          >
             Wanna make business together?
-            <Text>Let’s talk</Text>
+            <Text
+              style={{
+                color: "#FCA311",
+                marginLeft: "10px",
+                fontWeight: "700",
+              }}
+            >
+              Let’s talk
+            </Text>
           </Paragraph>
 
           <Input
@@ -99,14 +112,14 @@ export default function MessageSection() {
             id="email"
             name="email"
             type="email"
-            placeholder="Enter your email address"
+            placeholder="Email"
           />
           <Input
             ref={inputEl}
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Enter your email address"
+            id="message"
+            name="message"
+            type="text"
+            placeholder="Your message"
           />
 
           <div>
@@ -121,13 +134,9 @@ export default function MessageSection() {
             type="submit"
             disabled={status.submitting}
             className="subscribe__btn"
-            aria-label="Subscribe"
+            aria-label="HIRE ME"
           >
-            {!status.submitting
-              ? !status.submitted
-                ? "Subscribe"
-                : "Submitted"
-              : "Submitting..."}
+            HIRE ME
           </Button>
         </Box>
       </Container>
@@ -152,12 +161,10 @@ const shine = keyframes`
 const styles = {
   message: {
     backgroundColor: "#252F33",
-    height: "100vh",
     position: "relative",
     zIndex: 2,
     overflow: "hidden",
     container: {
-      pt: ["65px", "70px"],
       pb: ["65px", "70px"],
       display: "flex",
       flexDirection: "column",
@@ -166,17 +173,16 @@ const styles = {
       textAlign: "center",
     },
 
-    heading: {
-      background:
-        " linear-gradient(270deg, #D69008 3.66%, #FF5D53 39.81%, #FA314A 66.14%, #1A21BC 102.8%)",
-      webkitBackgroundClip: "text",
-      webkitTextFillColor: "transparent",
-      backgroundClip: "text",
-      textFillColor: "transparent",
-      backgroundSize: "200% auto",
-      animation: `${shine} 3s linear infinite`,
-    },
+    input: {
+      background: "#FFFFFF",
 
-    paragraph: { color: "#fff" },
+      borderRadius: "14px",
+      marginBottom: "15px",
+
+      "&::placeholder": {
+        fontSize: "22px",
+        color: "#787878",
+      },
+    },
   },
 };

@@ -28,12 +28,11 @@ export default function BackgroundImage() {
 }
 const styles = {
   backgroundImage: {
+    width: "100%",
+    height: "100%",
     position: "absolute",
     top: "0",
     left: "0",
-    height: "100vh",
-    width: "100vw",
-    overflow: "hidden",
     backgroundColor: "#252F33",
     zIndex: "-1",
   },

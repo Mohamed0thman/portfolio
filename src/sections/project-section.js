@@ -42,7 +42,7 @@ function CustomDot({ onMove, index, onClick, active }) {
         height: "8px",
         borderRadius: active ? "5px" : "50%",
         background: active ? "#12FDC4" : "#fff",
-        boxShadow: active ? "0px 2px 20px rgba(18, 253, 196, 0.58)" : "none",
+        boxShadow: active ? "0px 2px 20px rgba(18, 253, 196, 0.60)" : "none",
         borderRadius: "19px",
         marginRight: "5px",
 

@@ -80,7 +80,7 @@ function CustomDot({ onMove, index, onClick, active }) {
   );
 }
 
-export default function TestimonialCard() {
+export default function Testimonial() {
   const sliderParams = {
     additionalTransfrom: 0,
     arrows: false,

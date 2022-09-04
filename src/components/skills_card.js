@@ -1,5 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from "react";
-import { Flex, Box, Image } from "theme-ui";
+import {jsx, Flex, Box, Image } from "theme-ui";
 
 export default function SkillsCard({ skill, index }) {
   return (

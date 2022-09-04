@@ -22,16 +22,14 @@ export default {
     "1620px",
   ],
   fonts: {
-    Cairo: "'Cairo', sans-serif",
-    Quantico: "'Quantico', sans-serif",
-    Roboto: "'Roboto', sans-serif",
+    body: "'Roboto', sans-serif",
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
-  fontWeights: {
-    body: "normal",
-    heading: 500,
-    bold: 700,
-  },
+  // fontWeights: {
+  //   body: "normal",
+  //   heading: 500,
+  //   bold: 700,
+  // },
   lineHeights: {
     body: 1.8,
     heading: 1.5,
@@ -91,6 +89,8 @@ export default {
       overflow: "hidden",
     },
     testimonial: {
+      fontFamily: "'Roboto', sans-serif",
+
       pt: [8, null, 8, "70px", null, 8, null, "145px"],
       pb: ["90px", null, 9, null, null, 10, null, "190px"],
       overflow: "hidden",
@@ -134,10 +134,11 @@ export default {
       "& > span": {
         marginLeft: "20px",
         color: "#12FDC4",
-        textShadow: "glow",
+        textShadow: " 0px 4px 20px rgba(0, 255, 209, 0.58)",
       },
     },
   },
+
   links: {
     default: {
       fontSize: "18px",

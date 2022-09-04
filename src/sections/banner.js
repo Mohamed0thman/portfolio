@@ -2,11 +2,8 @@
 /** @jsx jsx */
 import { jsx, Container, Box, Heading, Text } from "theme-ui";
 import { keyframes } from "@emotion/react";
-// import Image from "next/image";
 
 import Image from "../components/image";
-
-// import Image from "../components/image";
 
 import Gmail from "../assets/icons/Gmail_icon.svg";
 import Linkedin from "../assets/icons/Linkedin_icon.svg";
@@ -111,6 +108,7 @@ const styles = {
   banner: {
     backgroundColor: "#252F33",
     height: "100vh",
+    width: "95vw",
     position: "relative",
     zIndex: 2,
     overflow: "hidden",
